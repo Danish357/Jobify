@@ -6,7 +6,7 @@
     "version": "1.0.0"
   },
   "host": "jobify-q4yg.onrender.com",
-  "basePath": "/api/v1",
+  "basePath": "/",
   "schemes": [
     "https"
   ],

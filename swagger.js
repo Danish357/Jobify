@@ -6,7 +6,7 @@ const doc = {
     description: 'This is a detailed description of the API endpoints and their usage.'
   },
   host: isProduction ? 'jobify-q4yg.onrender.com' : 'localhost:5000',
-   basePath: '/api/v1', // <-- Set the correct base path here
+  //  basePath: '/api/v1', // <-- Set the correct base path here
    schemes: [isProduction ? 'https' : 'http'],
 };
 
