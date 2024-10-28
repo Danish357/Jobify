@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "This is a detailed description of the API endpoints and their usage.",
+    "description": "Description of API endpoints and their usage.",
     "version": "1.0.0"
   },
   "host": "jobify-q4yg.onrender.com",
@@ -16,28 +16,41 @@
         "description": "",
         "parameters": [
           {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "fullname": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "phoneNumber": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                },
-                "role": {
-                  "example": "any"
-                }
-              }
-            }
+            "name": "file",
+            "in": "formData",
+            "required": false,
+            "type": "file",
+            "description": "Profile picture of the user"
+          },
+          {
+            "name": "fullname",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "phoneNumber",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "role",
+            "in": "formData",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -50,6 +63,7 @@
         }
       }
     },
+
     "/api/v1/user/login": {
       "post": {
         "description": "",
@@ -99,27 +113,40 @@
         "parameters": [
           {
             "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "fullname": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "phoneNumber": {
-                  "example": "any"
-                },
-                "bio": {
-                  "example": "any"
-                },
-                "skills": {
-                  "example": "any"
-                }
-              }
-            }
+            "in": "formData",
+            "required": false,
+            "type": "file",
+            "description": "Profile picture"
+          },
+          {
+            "name": "fullname",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "phoneNumber",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "bio",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "skills",
+            "in": "formData",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -138,15 +165,16 @@
         "parameters": [
           {
             "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "companyName": {
-                  "example": "any"
-                }
-              }
-            }
+            "in": "formData",
+            "required": false,
+            "type": "file",
+            "description": "Company logo file"
+          },
+          {
+            "name": "companyName",
+            "in": "formData",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -241,39 +269,64 @@
         "parameters": [
           {
             "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "requirements": {
-                  "example": "any"
-                },
-                "salary": {
-                  "example": "any"
-                },
-                "location": {
-                  "example": "any"
-                },
-                "jobType": {
-                  "example": "any"
-                },
-                "experience": {
-                  "example": "any"
-                },
-                "position": {
-                  "example": "any"
-                },
-                "companyId": {
-                  "example": "any"
-                }
-              }
-            }
+            "in": "formData",
+            "required": false,
+            "type": "file",
+            "description": "Job-related file (e.g., job description document)"
+          },
+          {
+            "name": "title",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "requirements",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "salary",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "location",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "jobType",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "experience",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "position",
+            "in": "formData",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "companyId",
+            "in": "formData",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -286,6 +339,7 @@
         }
       }
     },
+
     "/api/v1/job/get": {
       "get": {
         "description": "",
