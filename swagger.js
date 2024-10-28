@@ -10,6 +10,11 @@ const doc = {
 };
 
 const outputFile = './swagger-output.json';
-const routes = ['./index.js']; // Ensure you pass in the main file (index.js) that imports all routes
+const routes = [
+  './routes/user.route.js',
+  './routes/company.route.js',
+  './routes/job.route.js',
+  './routes/application.route.js',
+]; // Ensure you imports all routes
 
 swaggerAutogen()(outputFile, routes, doc);
