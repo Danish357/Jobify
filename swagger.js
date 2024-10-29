@@ -4,7 +4,7 @@ const doc = {
     title: 'My API',
     description: 'This is a detailed description of the API endpoints and their usage.'
   },
-  host:'jobify-q4yg.onrender.com',
+  host:'jobify-cqod.onrender.com',
   basePath: '/',
    schemes: ['https'],
 };

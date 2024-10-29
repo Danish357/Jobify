@@ -5,7 +5,7 @@
     "description": "Description of API endpoints and their usage.",
     "version": "1.0.0"
   },
-  "host": "jobify-q4yg.onrender.com",
+  "host": "jobify-cqod.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
